@@ -1,0 +1,8 @@
+# this is the older command
+mongoimport --type csv --headerline --db mflix --collection movies_initial --host "<CLUSTER>/<SEED_LIST>" --authenticationDatabase admin --ssl --username analytics --password analytics-password --file movies_initial.csv
+
+# this is the new command to import the data in mongodb
+mongoimport --uri mongodb+srv://chitra:myreads@helly-nflix.zmecu.mongodb.net/mflix --collection movies_initial --type csv --headerline --file movies_initial.csv
+
+# to connect through mongoshell
+mongo "mongodb+srv://helly-nflix.zmecu.mongodb.net/myFirstDatabase" --username chitra
